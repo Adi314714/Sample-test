@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": ".."
+	},
+	{
+		"path": "../../../חומר למבחן"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "Sample-test"
+  }
+}
