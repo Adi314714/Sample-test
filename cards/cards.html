@@ -10,15 +10,46 @@
         text-align: center;
       }
     </style>
+    <script>
+      const cards = [
+        "./photo/1.gif",
+        "./photo/2.gif",
+        "./photo/3.gif",
+        "./photo/4.gif",
+        "./photo/5.gif",
+        "./photo/6.gif",
+        "./photo/7.gif",
+        "./photo/8.gif",
+        "./photo/9.gif",
+        "./photo/10.gif",
+        "./photo/11.gif",
+        "./photo/12.gif",
+        "./photo/13.gif",
+      ];
+      document.addEventListener("click", function () {
+        const leftCard = document.getElementById("leftTD").querySelector("img");
+        const rightCard = document
+          .getElementById("rightTD")
+          .querySelector("img");
 
-    <script></script>
+        leftCard.addEventListener("click", function () {
+          const playerIndex = Math.floor(Math.random() * cards.length);
+          const computerIndex = Math.floor(Math.random() * cards.length);
+
+          leftCard.src = cards[playerIndex];
+          rightCard.src = cards[computerIndex];
+        });
+      });
+    </script>
   </head>
   <body onload="init()">
     <table>
       <tr>
-        <td id="leftTD"><img id="left" src="./images/1.gif" /></td>
+        <td id="leftTD">
+          <img id="left" src=".//photo/1.gif" />
+        </td>
         <td></td>
-        <td id="rightTD"><img id="right" src="./images/1.gif" /></td>
+        <td id="rightTD"><img id="right" src=".//photo/1.gif" /></td>
       </tr>
       <tr>
         <td id="leftScoreTD"></td>
