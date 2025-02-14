@@ -18,14 +18,30 @@
         transition: all 2s;
       }
     </style>
-    <script defer src="./airplane.js"></script>
   </head>
   <body>
     <img src="./airplane.png" style="width: 120px" alt="airplane" />
     <button id="start-fly">Start Fly</button>
     <button id="reset">Reset</button>
     <script>
-      // כתבו את הקוד שלכם כאן
+      //כתבו את הקוד שלכם כן
+      const StartButton = document.getElementById("start-fly");
+      StartButton.addEventListener("click", up);
+      const ResetButton = document.getElementById("reset");
+      ResetButton.addEventListener("click", down);
+
+      //function
+      function up() {
+        const Airplaneimage = document.querySelector("img");
+        Airplaneimage.style.bottom = "85%";
+        Airplaneimage.style.left = "85%";
+      }
+
+      function down() {
+        const Airplaneimage = document.querySelector("img");
+        Airplaneimage.style.bottom = "";
+        Airplaneimage.style.left = "";
+      }
     </script>
   </body>
 </html>
