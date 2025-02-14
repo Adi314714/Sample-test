@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Colors</title>
+
+    <style type="text/css">
+      #btn {
+        width: 200px;
+        height: 100px;
+        font-size: 50px;
+      }
+
+      select {
+        width: 200px;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn">Show</button>
+    <div id="d1">
+      <select>
+        <option value="-1">choose color</option>
+        <option value="red">red</option>
+        <option value="green">green</option>
+        <option value="blue">blue</option>
+      </select>
+    </div>
+    <script>
+      const bottonOn = document.getElementById("btn");
+      const div = document.getElementById("d1");
+      bottonOn.addEventListener("click", function (event) {
+        if (bottonOn.textContent === "Show") {
+          bottonOn.textContent = "hide";
+          div.style.display = "block";
+        } else {
+          bottonOn.textContent = "Show";
+          div.style.display = "none";
+        }
+      });
+      const chooseColor = document.getElementById("d1");
+      chooseColor.addEventListener("click", ()=>{
+        if(chooseColor)
+      })
+    </script>
+  </body>
+</html>
