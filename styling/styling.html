@@ -56,7 +56,7 @@
 
     <script>
       // styling solution
-
+      // תפיסת אלמנטים
       const sizeText = document.getElementById("fontSizeSelect");
       const Pressme = document.querySelector("button");
       const textSentence = document.getElementById("ph");
@@ -64,11 +64,41 @@
       const greenColor = document.getElementById("green");
       const blueColor = document.getElementById("blue");
 
+      // אירועים
       Pressme.addEventListener("click", () => {
-        textSentence.style.fontSize = sizeText.value + "px";
-        let color = "#" + redColor.value + greenColor.value + blueColor.value;
-        textSentence.style.backgroundColor = color;
+        const redcheck = checkSize(redColor.value);
+        const greencheck = checkSize(greenColor.value);
+        const bluecheck = checkSize(blueColor.value);
+        const redcheck2 = checkContent(redColor.value);
+        const greencheck2 = checkContent(greenColor.value);
+        const bluecheck2 = checkContent(blueColor.value);
+        if (redcheck && greencheck && bluecheck) {
+          textSentence.style.fontSize = sizeText.value + "px";
+          let color = "#" + redColor.value + greenColor.value + blueColor.value;
+          textSentence.style.backgroundColor = color;
+        } else {
+          return;
+        }
       });
+
+      function checkSize(value) {
+        if (value.length !== 2) {
+          alert("לא תקין");
+          return false;
+        } else {
+          return true;
+        }
+      }
+      function checkContent(value) {
+        for (let i = 0; i < value.length; i++) {
+          const char = value[i];
+          if (!(char >= "A" && char <= "F")) {
+            alert("לא תקין");
+            return false;
+          }
+        }
+        return true;
+      }
     </script>
   </body>
 </html>

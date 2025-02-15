@@ -28,21 +28,26 @@
       </select>
     </div>
     <script>
-      const bottonOn = document.getElementById("btn");
-      const div = document.getElementById("d1");
-      bottonOn.addEventListener("click", function (event) {
-        if (bottonOn.textContent === "Show") {
-          bottonOn.textContent = "hide";
-          div.style.display = "block";
-        } else {
-          bottonOn.textContent = "Show";
-          div.style.display = "none";
+      const buttonOn = document.getElementById("btn");
+      const chooseColor = document.querySelector("select");
+      buttonOn.addEventListener("click", changeButton);
+      // function
+
+      function changeButton() {
+        if (buttonOn.innerHTML === "Hide") {
+          buttonOn.innerText = "show";
+          chooseColor.style.display = "block";
+          buttonOn.style.backgroundColor = "initial";
+          chooseColor.value = "-1";
+          return;
+        } else if (chooseColor.value === "-1") {
+          alert("Please choose a color");
+          return;
         }
-      });
-      const chooseColor = document.getElementById("d1");
-      chooseColor.addEventListener("click", ()=>{
-        if(chooseColor)
-      })
+        buttonOn.style.backgroundColor = chooseColor.value;
+        buttonOn.innerText = "Hide";
+        chooseColor.style.display = "none";
+      }
     </script>
   </body>
 </html>
