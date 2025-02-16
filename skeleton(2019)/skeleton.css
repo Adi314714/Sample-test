@@ -1,0 +1,52 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+div {
+  font-size: 30px;
+}
+
+.container {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+#left {
+  height: 250px;
+  display: flex;
+}
+#right {
+  height: 300px;
+  display: flex;
+}
+
+.d1 {
+  background-color: red;
+}
+.d2 {
+  background-color: green;
+}
+
+.d3 {
+  background-color: red;
+}
+
+.d4 {
+  background-color: blue;
+}
+
+.img1 {
+  background-color: red;
+}
+
+.d5 {
+  background-color: blue;
+}
+
+img {
+  padding-top: 50px;
+  width: 100%;
+}
